@@ -10,7 +10,7 @@ import Link from "next/link";
 function Login() {
   return (
     <section className="flex items-center justify-center min-h-screen">
-      <div className="container mx-auto flex flex-col items-center justify-center min-h-[100vh]">
+      <div className="container mx-auto flex flex-col items-center justify-center min-h-[100vh] my-6">
         {/* Login Form */}
         <motion.div
           className="bg-white rounded-3xl p-8 max-w-lg w-full border-accent_secondary shadow-md"
@@ -25,7 +25,7 @@ function Login() {
 
           {/* Google Login Button */}
           <motion.button
-            className="w-full py-2 bg-white border border-gray-300 text-gray-700 font-semibold rounded-full hover:bg-gray-100 transition flex items-center justify-center space-x-2 mb-6"
+            className="w-full py-2 bg-white border border-gray-300 text-gray-700 font-semibold rounded-[0.5rem] hover:bg-gray-100 transition flex items-center justify-center space-x-2 mb-6"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -57,7 +57,7 @@ function Login() {
                 type="email"
                 id="email"
                 name="email"
-                className="w-full border border-gray-300 rounded-full focus:outline-none focus:border-accent_secondary"
+                className="w-full border border-gray-300 rounded-[0.5rem] focus:outline-none focus:border-accent_secondary"
                 placeholder="Enter your email"
               />
             </motion.div>
@@ -78,7 +78,7 @@ function Login() {
                 type="password"
                 id="password"
                 name="password"
-                className="w-full border border-gray-300 rounded-full focus:outline-none focus:border-accent_secondary"
+                className="w-full border border-gray-300 rounded-[0.5rem] focus:outline-none focus:border-accent_secondary"
                 placeholder="Enter your password"
               />
             </motion.div>
