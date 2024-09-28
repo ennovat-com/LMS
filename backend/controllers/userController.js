@@ -82,7 +82,7 @@ exports.updateProfile = async (req, res) => {
 // Create user
 exports.createUser = async (req, res) => {
   try {
-    const { email, phoneNumber, password } = req.body;
+    const { name, email, phoneNumber, password } = req.body;
     
     // Check if user already exists
     const existingUser = await User.findOne({ email });
@@ -90,7 +90,7 @@ exports.createUser = async (req, res) => {
       return res.status(400).json({ message: 'User already exists with this email' });
     }
 
-    const user = new User({ email, phoneNumber, password });
+    const user = new User({ name, email, phoneNumber, password });
     await user.save();
 
     res.status(201).json({ message: 'User created successfully', userId: user._id });
